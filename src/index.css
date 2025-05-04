@@ -3,6 +3,22 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
+@import "tailwindcss";
+@plugin "daisyui";
+
+/* Customize Existing Theme */
+@plugin "daisyui/theme" {
+  name: "light";
+  default: true;
+  --color-primary: oklch(55.8% 0.288 302.321);
+  --color-secondary: teal;
+  --color-accent: #706F6F;
+}
+
+
 *{
     font-family: "Quicksand", sans-serif;
+}
+body button{
+  cursor: pointer;
 }

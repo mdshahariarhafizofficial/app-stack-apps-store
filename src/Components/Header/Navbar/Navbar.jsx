@@ -1,0 +1,72 @@
+import React from "react";
+import { Link, NavLink } from "react-router";
+import AppStoreLogo from "../../../assets/Logo.png";
+
+const Navbar = () => {
+    const menuLinks = <>
+            <li>
+              <NavLink to="" className={
+                ({isActive}) => 
+                    isActive? "border-b-2 border-primary rounded-none text-primary" : ""
+                }>Apps</NavLink>
+            </li>
+            <li>
+              <NavLink to="/my-profile" className={
+                ({isActive}) => 
+                    isActive? "border-b-2 border-primary" : ""
+                }>My Profile</NavLink>
+            </li>
+    </>
+  return (
+    <div className="navbar py-5 lg:px-0 px-2">
+      <div className="navbar-start">
+        <div className="dropdown">
+          <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              {" "}
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M4 6h16M4 12h8m-8 6h16"
+              />{" "}
+            </svg>
+          </div>
+          <ul
+            tabIndex={0}
+            className="menu space-y-4 text-lg font-bold menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+          >
+            {
+                menuLinks
+            }
+          </ul>
+        </div>
+        <a className="">
+            <img className="w-48" src={AppStoreLogo} alt="" />
+        </a>
+      </div>
+      <div className="navbar-center hidden lg:flex">
+        <ul className="menu space-x-6 text-lg font-bold menu-horizontal px-1">
+            {
+                menuLinks
+            }
+        </ul>
+      </div>
+      <div className="navbar-end gap-5">
+            <img className="w-12" src="https://www.pngkey.com/png/detail/202-2024792_user-profile-icon-png-download-fa-user-circle.png" alt="" />
+        <div>
+            <button type="button" className="text-base font-semibold  text-white bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800 shadow-lg shadow-purple-500/50 dark:shadow-lg dark:shadow-purple-800/80 rounded-none px-5 py-2.5 text-center me-2 mb-2">Login</button>
+        </div>
+
+      </div>
+    </div>
+  );
+};
+
+export default Navbar;
