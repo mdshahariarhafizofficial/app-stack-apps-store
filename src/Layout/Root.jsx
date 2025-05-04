@@ -12,9 +12,15 @@ const Root = () => {
                 </nav>
             </div>
           </header>
+
           <main className='max-w-[1280px] mx-auto'>
             <Outlet></Outlet>  
           </main>
+
+          <footer>
+            
+          </footer>
+          
         </>
     );
 };
