@@ -102,7 +102,7 @@
     "thumbnail": "https://i.postimg.cc/vmyTjDdy/Evernotelogo.png",
     "banner": "https://i.postimg.cc/vZrHWMxN/Evernote-Thumb.avif",
     "downloads": 50000000,
-    "category": "Productivity, Business, Education",
+    "category": "Productivity, Business",
     "isTrending": false,
     "rating": 4.5,
     "description": "Evernote is an app for taking notes, organizing tasks, and managing documents in one easy-to-use platform.",
@@ -337,25 +337,25 @@
   },
   {
     "id": "app015",
-    "name": "TikTok",
-    "developer": "ByteDance",
-    "thumbnail": "https://i.postimg.cc/Y9ZhdRrn/Tik-Tok-Logo-wine.png",
-    "banner": "https://i.postimg.cc/RFNW1yBJ/tiktok-bannr.png",
-    "downloads": 2000000000,
-    "category": "Entertainment, Social Media, Music",
-    "isTrending": false,
-    "rating": 4.6,
-    "description": "TikTok is a popular social media platform that lets you create and share short-form videos with music, filters, and effects.",
+    "name": "Khan Academy",
+    "developer": "Khan Academy",
+    "thumbnail": "https://i.postimg.cc/BZz63mGM/Khan-Academy-logo.png",
+    "banner": "https://i.postimg.cc/br4NRwRK/Khan-Academy-banner.jpg",
+    "downloads": 100000000,
+    "category": "Education",
+    "rating": 4.7,
+    "description": "Khan Academy offers free, world-class education for anyone, anywhere. Learn math, science, economics, history, and more with thousands of interactive exercises and videos.",
     "features": [
-      "Video creation and editing tools",
-      "Social sharing and following",
-      "Music and filter integration"
+      "Practice exercises and quizzes",
+      "Video lessons across subjects",
+      "Personalized learning dashboard",
+      "Offline access to content"
     ],
     "reviews": [
       {
-        "user": "video_lover123",
-        "rating": 4,
-        "comment": "Fun app, but the algorithm could use some work."
+        "user": "learner_rahim",
+        "rating": 5,
+        "comment": "An excellent platform for self-paced learning. Completely free and very high quality!"
       }
     ]
   },
