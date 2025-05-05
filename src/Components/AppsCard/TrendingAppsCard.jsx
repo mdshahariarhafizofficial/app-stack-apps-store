@@ -2,10 +2,10 @@ import React from "react";
 import { FaDownload, FaStar } from "react-icons/fa";
 
 const TrendingAppsCard = ({ app }) => {
-  const { name, thumbnail, downloads, rating } = app;
+  const { name, thumbnail, downloads, rating, isTrending } = app;
   return (
     <div>
-      <div className="card bg-base-100 shadow-sm border-1 border-gray-200">
+      <div className="relative overflow-hidden card bg-base-100 shadow-sm border-1 border-gray-200">
         <figure className="px-10 pt-10">
             <div className="w-24 mx-auto">
                 <img
@@ -25,6 +25,12 @@ const TrendingAppsCard = ({ app }) => {
             </div>
           
         </div>
+        {
+          isTrending ?  <p className="absolute top-4 -left-10 bg-red-600 text-white font-bold w-40 text-sm text-center py-1 rotate-[-35deg]">Trending</p> : ""
+        }
+        {
+          name === 'Programming Hero' && <p className="absolute top-4 -left-10 bg-green-500 text-white font-bold w-40 text-sm text-center py-1 rotate-[-35deg]">Popular</p>
+        }
       </div>
     </div>
   );
