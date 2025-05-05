@@ -9,7 +9,8 @@ const Apps = () => {
   useEffect(()=> {
     const filterTrendingApps = data.filter( app => app.isTrending === true);
     setTrending(filterTrendingApps)
-  }, [data])
+  }, [data]);
+
   
   return (
     <div>
