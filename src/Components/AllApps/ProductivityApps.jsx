@@ -1,9 +1,7 @@
 import React from 'react';
 import AppsCard from '../AppsCard/AppsCard';
 
-const ProductivityApps = ({productivity}) => {
-    console.log(productivity);
-    
+const ProductivityApps = ({productivity}) => {    
     
     return (
         <div className='my-20 px-5 lg:px-0'>

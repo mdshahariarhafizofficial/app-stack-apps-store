@@ -478,5 +478,54 @@
         "comment": "Helps me avoid traffic and find the fastest route."
       }
     ]
+  },
+  {
+    "id": "app021",
+    "name": "Lifesum",
+    "developer": "Lifesum AB",
+    "thumbnail": "https://i.postimg.cc/FFTn7TbS/lifesumlogo.png",
+    "banner": "https://i.postimg.cc/25N0PMYs/lifesum-cover.avif",
+    "downloads": 10000000,
+    "category": "Health & Fitness",
+    "rating": 4.5,
+    "description": "Lifesum is a health app that combines nutrition tracking, meal planning, and habit-building tools to help you live a healthier life.",
+    "features": [
+      "Personalized diet plans",
+      "Food diary with barcode scanner",
+      "Healthy recipes and meal suggestions",
+      "Nutrition tips and insights"
+    ],
+    "reviews": [
+      {
+        "user": "fitgoals_mira",
+        "rating": 5,
+        "comment": "Super helpful for meal planning and sticking to my diet goals!"
+      }
+    ]
+  },
+  {
+    "id": "app022",
+    "name": "Headspace",
+    "developer": "Headspace Inc.",
+    "thumbnail": "https://i.postimg.cc/zBJ0fhVp/headspace-logo.jpg",
+    "banner": "https://i.postimg.cc/0QcZKNSv/Headspacebanner.jpg",
+    "downloads": 10000000,
+    "category": "Health & Fitness",
+    "rating": 4.6,
+    "description": "Headspace is a meditation and mental wellness app offering guided sessions to reduce stress and improve focus and sleep.",
+    "features": [
+      "Guided meditation sessions",
+      "Sleep sounds and wind-downs",
+      "Mindfulness workouts",
+      "Daily reminders and progress tracking"
+    ],
+    "reviews": [
+      {
+        "user": "calmmind_jane",
+        "rating": 5,
+        "comment": "A lifesaver for anxiety and sleep! The sleepcasts are amazing."
+      }
+    ]
   }
+  
 ]
