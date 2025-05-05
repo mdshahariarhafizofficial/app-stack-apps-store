@@ -18,7 +18,7 @@ const Root = () => {
           </main>
 
           <footer>
-            
+        
           </footer>
           
         </>

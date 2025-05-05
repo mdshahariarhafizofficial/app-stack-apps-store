@@ -1,9 +1,19 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import TrendingApps from "../../Components/AllApps/TrendingApps";
+import { useLoaderData } from "react-router";
 
 const Apps = () => {
+  const [trending, setTrending] = useState([]);
+  const data = useLoaderData();
+
+  useEffect(()=> {
+    const filterTrendingApps = data.filter( app => app.isTrending === true);
+    setTrending(filterTrendingApps)
+  }, [data])
+  
   return (
     <div>
-      <h1>Apps Page</h1>
+      <TrendingApps trending = {trending}></TrendingApps>
     </div>
   );
 };
