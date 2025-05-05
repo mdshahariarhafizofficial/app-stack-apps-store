@@ -1,5 +1,5 @@
 import React from 'react';
-import TrendingAppsCard from '../AppsCard/TrendingAppsCard';
+import AppsCard from '../AppsCard/AppsCard';
 
 const TrendingApps = ({trending}) => {
     
@@ -11,10 +11,10 @@ const TrendingApps = ({trending}) => {
                 {
                     trending
                     .sort( (a,b) => a.rating < b.rating ? 1 : -1 )
-                    .map(app => <TrendingAppsCard
+                    .map(app => <AppsCard
                         key={app.id} 
                         app={app}
-                        ></TrendingAppsCard>)
+                        ></AppsCard>)
                 }
             </div>
         </div>
