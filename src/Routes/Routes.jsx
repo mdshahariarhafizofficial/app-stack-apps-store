@@ -7,6 +7,7 @@ import NotFound from '../Pages/Error/NotFound';
 import AppDetails from '../Pages/AppDetailsPage/AppDetails';
 import Register from '../Pages/RegisterPage/Register';
 import Login from '../Pages/LoginPage/Login';
+import MyProfile from '../Pages/My Profile page/MyProfile';
 
 const router = createBrowserRouter([
     {
@@ -21,7 +22,7 @@ const router = createBrowserRouter([
             },
             {
                 path: 'my-profile',
-                element: <p>Profile Page</p>
+                Component: MyProfile,
             },
             {
                 path: "/app-details/:id",
