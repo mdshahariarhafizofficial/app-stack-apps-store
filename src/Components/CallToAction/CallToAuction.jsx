@@ -2,7 +2,7 @@ import React from 'react';
 
 const CallToAuction = () => {
     return (
-    <div className="w-full md:py-10">
+    <div className="w-full md:py-10 border-t-2 border-gray-200">
         <div className="flex flex-col flex-wrap content-center justify-center p-4 py-20 mx-auto md:p-10" bis_skin_checked="1">
             <h1 className="lg:text-5xl md:text-4xl text-3xl antialiased font-bold leading-none text-center text-primary"> Subscribe To get Latest Updates</h1>
             <p className="pt-2 pb-8 text-xl antialiased text-center dark:text-gray-800">Find out about events and other news</p>

@@ -16,7 +16,7 @@ const CounterSection = () => {
 			</div>
 			<div className="flex flex-col justify-center align-middle" bis_skin_checked="1">
 				<p className="text-4xl font-bold leading-none">
-                    {<CountUp end={1999} duration={10} />} +
+                    {<CountUp end={1999} duration={20} />} +
                 </p>
 				<p className="capitalize font-bold text-accent">Apps</p>
 			</div>
@@ -28,7 +28,7 @@ const CounterSection = () => {
 			</div>
 			<div className="flex flex-col justify-center align-middle" bis_skin_checked="1">
 				<p className="text-4xl font-bold leading-none">
-                    {<CountUp end={4999} duration={10} />} +
+                    {<CountUp end={4999} duration={20} />} +
                 </p>
 				<p className="capitalize font-bold text-accent">Reviews</p>
 			</div>
@@ -40,7 +40,7 @@ const CounterSection = () => {
 			</div>
 			<div className="flex flex-col justify-center align-middle" bis_skin_checked="1">
 				<p className="text-4xl font-bold leading-none">
-                    {<CountUp end={9999} duration={10} />} +
+                    {<CountUp end={9999} duration={20} />} +
                 </p>
 				<p className="capitalize font-bold text-accent">Downloads</p>
 			</div>
@@ -52,7 +52,7 @@ const CounterSection = () => {
 			</div>
 			<div className="flex flex-col justify-center align-middle" bis_skin_checked="1">
 				<p className="text-4xl font-bold leading-none">
-                    {<CountUp end={8999} duration={10} />} +
+                    {<CountUp end={8999} duration={20} />} +
                 </p>
 				<p className="capitalize font-bold text-accent">Program Version Listed</p>
 			</div>

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router';
 import errorImg from '../../assets/error404.jpg'
+import { Helmet } from 'react-helmet';
 
 const NotFound = () => {
     const location = useLocation();
@@ -8,6 +9,9 @@ const NotFound = () => {
 	
     return (
 <section className="min-h-[100vh] flex items-center h-full md:p-16 ">
+	<Helmet>
+        <title>App Store - 404 Not Found</title>
+      </Helmet>
 	<div className="container flex flex-col items-center justify-center px-5 mx-auto my-8" bis_skin_checked="1">
 		<div className="max-w-5xl text-center" bis_skin_checked="1">
 			<img className='w-[600px] mx-auto' src={errorImg} alt="" />

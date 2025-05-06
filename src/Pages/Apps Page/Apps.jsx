@@ -7,6 +7,7 @@ import EducationalApps from "../../Components/AllApps/EducationalApps";
 import SliderSection from "../../Components/Header/Slider/SliderSection";
 import CounterSection from "../../Components/CounterSection/CounterSection";
 import CallToAuction from "../../Components/CallToAction/CallToAuction";
+import { Helmet } from "react-helmet";
 
 const Apps = () => {
   const [trending, setTrending] = useState([]);
@@ -33,6 +34,9 @@ const Apps = () => {
   
   return (
     <div>
+      <Helmet>
+        <title>App Store - Apps</title>
+      </Helmet>
       <SliderSection></SliderSection>
       <TrendingApps trending = {trending}></TrendingApps>
       <CounterSection></CounterSection>
