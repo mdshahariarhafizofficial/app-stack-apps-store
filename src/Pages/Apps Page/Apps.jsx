@@ -6,6 +6,7 @@ import HealthcareApps from "../../Components/AllApps/HealthcareApps";
 import EducationalApps from "../../Components/AllApps/EducationalApps";
 import SliderSection from "../../Components/Header/Slider/SliderSection";
 import CounterSection from "../../Components/CounterSection/CounterSection";
+import CallToAuction from "../../Components/CallToAction/CallToAuction";
 
 const Apps = () => {
   const [trending, setTrending] = useState([]);
@@ -38,6 +39,7 @@ const Apps = () => {
       <ProductivityApps productivity = {productivity}></ProductivityApps>
       <HealthcareApps healthcare={healthcare}></HealthcareApps>
       <EducationalApps educational={educational}></EducationalApps>
+      <CallToAuction></CallToAuction>
     </div>
   );
 };
