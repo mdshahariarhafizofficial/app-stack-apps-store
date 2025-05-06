@@ -48,7 +48,7 @@ const Navbar = () => {
           </ul>
         </div>
         <Link to=''>
-            <img className="w-48" src={AppStoreLogo} alt="" />
+            <img className="w-40" src={AppStoreLogo} alt="" />
         </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
@@ -61,7 +61,9 @@ const Navbar = () => {
       <div className="navbar-end gap-5 items-center">
             <img className="w-12" src="https://www.pngkey.com/png/detail/202-2024792_user-profile-icon-png-download-fa-user-circle.png" alt="" />
         <div>
-          <button type="button" className="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-sm text-sm px-6 py-2.5 text-center me-2 mb-2 ">Login</button>
+          <Link to="login">
+            <button type="button" className="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-sm text-sm px-6 py-2.5 text-center me-2 mb-2 ">Login</button>
+          </Link>
         </div>
 
       </div>
