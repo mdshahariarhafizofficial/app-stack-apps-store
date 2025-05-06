@@ -45,7 +45,7 @@ const TrendingApps = ({trending}) => {
 
     
     return (
-        <div className='my-10 px-10 lg:px-0'>
+        <div className='mt-10 mb-20 px-10 lg:px-0'>
             <h2 className='text-3xl font-bold mb-5'>Trending Apps</h2>
 
             {/* Slider */}

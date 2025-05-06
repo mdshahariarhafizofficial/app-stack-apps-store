@@ -5,6 +5,7 @@ import ProductivityApps from "../../Components/AllApps/ProductivityApps";
 import HealthcareApps from "../../Components/AllApps/HealthcareApps";
 import EducationalApps from "../../Components/AllApps/EducationalApps";
 import SliderSection from "../../Components/Header/Slider/SliderSection";
+import CounterSection from "../../Components/CounterSection/CounterSection";
 
 const Apps = () => {
   const [trending, setTrending] = useState([]);
@@ -33,6 +34,7 @@ const Apps = () => {
     <div>
       <SliderSection></SliderSection>
       <TrendingApps trending = {trending}></TrendingApps>
+      <CounterSection></CounterSection>
       <ProductivityApps productivity = {productivity}></ProductivityApps>
       <HealthcareApps healthcare={healthcare}></HealthcareApps>
       <EducationalApps educational={educational}></EducationalApps>
