@@ -1,10 +1,13 @@
 import React from "react";
 import { FaDownload, FaStar } from "react-icons/fa";
+import { Link } from "react-router";
 
 const AppsCard = ({app}) => {
-  const { name, thumbnail, downloads, rating, isTrending } = app;
+  const { id, name, thumbnail, downloads, rating, isTrending } = app;
   return (
-    <div>
+    <Link onClick={()=>{
+      window.scrollTo(0, 0)
+    }} to={`/app-details/${id}`}>
       <div className="relative overflow-hidden card bg-base-100 shadow-sm border-1 border-gray-200">
         <figure className="px-10 pt-10">
           <div className="w-24 mx-auto">
@@ -38,7 +41,7 @@ const AppsCard = ({app}) => {
           </p>
         )}
       </div>
-    </div>
+    </Link>
   );
 };
 
