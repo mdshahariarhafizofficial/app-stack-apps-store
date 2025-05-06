@@ -18,6 +18,13 @@
 .slick-slide > div{
   margin: 0 15px;
 }
+.slick-prev:before, .slick-next:before{
+  color:  #007aff !important;
+  font-size: 30px !important;
+}
+.slick-prev, .slick-next{
+  z-index: 100 !important;
+}
 
 html {
   scroll-behavior: smooth;

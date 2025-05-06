@@ -6,7 +6,7 @@ import Slider from "react-slick";
 
 const TrendingApps = ({trending}) => {
     var settings = {
-        dots: true,
+        dots: false,
         infinite: true,
         speed: 1000,
         autoplay: true,
@@ -21,7 +21,7 @@ const TrendingApps = ({trending}) => {
               slidesToShow: 2,
               slidesToScroll: 2,
               infinite: true,
-              dots: true
+              dots: false
             }
           },
           {
@@ -45,7 +45,7 @@ const TrendingApps = ({trending}) => {
 
     
     return (
-        <div className='my-10 px-5 lg:px-0'>
+        <div className='my-10 px-10 lg:px-0'>
             <h2 className='text-3xl font-bold mb-5'>Trending Apps</h2>
 
             {/* Slider */}
