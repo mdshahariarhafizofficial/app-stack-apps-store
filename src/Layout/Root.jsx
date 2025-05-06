@@ -14,7 +14,7 @@ const Root = () => {
             </div>
           </header>
 
-          <main className='max-w-[1280px] mx-auto'>
+          <main className='max-w-[1280px] mx-auto min-h-[calc(100vh-413.59px)]'>
             <Outlet></Outlet>  
           </main>
 

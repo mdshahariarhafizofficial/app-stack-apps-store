@@ -3,6 +3,7 @@ import { createBrowserRouter } from 'react-router';
 import Root from '../Layout/Root';
 import App from '../App';
 import Apps from '../Pages/Apps Page/Apps';
+import NotFound from '../Pages/Error/NotFound';
 
 const router = createBrowserRouter([
     {
@@ -23,7 +24,7 @@ const router = createBrowserRouter([
     },
     {
         path: "/*",
-        element: <h2>404 Error</h2>
+        element: <NotFound></NotFound>
     }
 
 ])

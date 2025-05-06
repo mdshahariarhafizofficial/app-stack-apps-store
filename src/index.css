@@ -36,3 +36,6 @@ html {
 body button{
   cursor: pointer;
 }
+a{
+  border: none;
+}
