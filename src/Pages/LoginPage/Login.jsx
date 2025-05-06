@@ -3,7 +3,7 @@ import { Link } from 'react-router';
 
 const Login = () => {
     return (
-        <div className='h-[calc(100vh-412px)] flex items-center justify-center'>
+        <div className='min-h-[calc(100vh-412px)] px-5 md:px-0 py-16 flex items-center justify-center'>
             <div className="card bg-base-100 w-full max-w-lg shrink-0 shadow-2xl">
             <form className="card-body">
                 <h2 className='text-4xl font-bold text-center'>Login</h2>
