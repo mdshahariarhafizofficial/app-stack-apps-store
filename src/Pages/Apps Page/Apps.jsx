@@ -4,6 +4,7 @@ import { useLoaderData } from "react-router";
 import ProductivityApps from "../../Components/AllApps/ProductivityApps";
 import HealthcareApps from "../../Components/AllApps/HealthcareApps";
 import EducationalApps from "../../Components/AllApps/EducationalApps";
+import SliderSection from "../../Components/Header/Slider/SliderSection";
 
 const Apps = () => {
   const [trending, setTrending] = useState([]);
@@ -30,6 +31,7 @@ const Apps = () => {
   
   return (
     <div>
+      <SliderSection></SliderSection>
       <TrendingApps trending = {trending}></TrendingApps>
       <ProductivityApps productivity = {productivity}></ProductivityApps>
       <HealthcareApps healthcare={healthcare}></HealthcareApps>

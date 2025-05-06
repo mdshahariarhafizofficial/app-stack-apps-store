@@ -10,7 +10,7 @@
 @plugin "daisyui/theme" {
   name: "light";
   default: true;
-  --color-primary: oklch(55.8% 0.288 302.321);
+  --color-primary: #007aff;
   --color-secondary: teal;
   --color-accent: #706F6F;
 }
@@ -19,6 +19,9 @@
   margin: 0 15px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
 
 *{
     font-family: "Quicksand", sans-serif;

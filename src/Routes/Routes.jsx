@@ -15,6 +15,10 @@ const router = createBrowserRouter([
                 loader: () => fetch("../apps.json"),
                 hydrateFallbackElement: <p>Loading........</p>
             },
+            {
+                path: 'my-profile',
+                element: <p>Profile Page</p>
+            }
         ]
     },
     {

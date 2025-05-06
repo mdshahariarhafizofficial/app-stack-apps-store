@@ -13,7 +13,7 @@ const Navbar = () => {
             <li>
               <NavLink to="/my-profile" className={
                 ({isActive}) => 
-                    isActive? "border-b-2 border-primary" : ""
+                    isActive? "border-b-2 border-primary rounded-none text-primary" : ""
                 }>My Profile</NavLink>
             </li>
     </>
@@ -47,9 +47,9 @@ const Navbar = () => {
             }
           </ul>
         </div>
-        <a className="">
+        <Link to=''>
             <img className="w-48" src={AppStoreLogo} alt="" />
-        </a>
+        </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu space-x-6 text-lg font-bold menu-horizontal px-1">
@@ -58,10 +58,10 @@ const Navbar = () => {
             }
         </ul>
       </div>
-      <div className="navbar-end gap-5">
+      <div className="navbar-end gap-5 items-center">
             <img className="w-12" src="https://www.pngkey.com/png/detail/202-2024792_user-profile-icon-png-download-fa-user-circle.png" alt="" />
         <div>
-            <button type="button" className="text-base font-semibold  text-white bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800 shadow-lg shadow-purple-500/50 dark:shadow-lg dark:shadow-purple-800/80 rounded-none px-5 py-2.5 text-center me-2 mb-2">Login</button>
+          <button type="button" class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-sm text-sm px-6 py-2.5 text-center me-2 mb-2 ">Login</button>
         </div>
 
       </div>
