@@ -15,13 +15,12 @@
       "Real-world projects",
       "Gamified learning experience"
     ],
-    "reviews": [
+    "reviews": 
       {
         "user": "coder_nadia",
         "rating": 5,
         "comment": "Best app for beginners! The lessons are super easy to follow and engaging."
       }
-    ]
   },
   {
     "id": "app002",
@@ -39,13 +38,13 @@
       "Daily practice reminders",
       "Gamified lessons and rewards"
     ],
-    "reviews": [
+    "reviews": 
       {
         "user": "polyglot_sophie",
         "rating": 5,
         "comment": "Love this app! It's an easy and fun way to learn new languages."
       }
-    ]
+    
   },
   {
     "id": "app003",
@@ -63,13 +62,13 @@
       "Connect with friends for motivation",
       "Sync with fitness trackers"
     ],
-    "reviews": [
+    "reviews": 
       {
         "user": "fit_johnny",
         "rating": 5,
         "comment": "Excellent for tracking calories. It's easy to use and helps me stay on track."
       }
-    ]
+    
   },
   {
     "id": "app004",
@@ -87,13 +86,13 @@
       "Social sharing and following",
       "Music and filter integration"
     ],
-    "reviews": [
+    "reviews": 
       {
         "user": "video_lover123",
         "rating": 4,
         "comment": "Fun app, but the algorithm could use some work."
       }
-    ]
+    
   },
   {
     "id": "app005",
@@ -111,13 +110,13 @@
       "Task management",
       "Cloud syncing across devices"
     ],
-    "reviews": [
+    "reviews": 
       {
         "user": "task_master",
         "rating": 5,
         "comment": "Great for keeping everything organized and accessible on all devices."
       }
-    ]
+    
   },
   {
     "id": "app006",
@@ -135,13 +134,13 @@
       "Personalized playlists",
       "Offline listening"
     ],
-    "reviews": [
+    "reviews": 
       {
         "user": "music_lover92",
         "rating": 5,
         "comment": "I love the music selection and the personalized playlists!"
       }
-    ]
+    
   },
   {
     "id": "app007",
@@ -159,13 +158,13 @@
       "Voice notes and reminders",
       "Sync across all devices"
     ],
-    "reviews": [
+    "reviews": 
       {
         "user": "organized_sara",
         "rating": 5,
         "comment": "Perfect for quick note-taking and staying on top of tasks."
       }
-    ]
+    
   },
   {
     "id": "app008",
@@ -183,13 +182,13 @@
       "Group chats and broadcast lists",
       "End-to-end encryption"
     ],
-    "reviews": [
+    "reviews": 
       {
         "user": "chatting_joe",
         "rating": 5,
         "comment": "Great for staying in touch with family and friends!"
       }
-    ]
+    
   },
   {
     "id": "app009",
@@ -207,13 +206,13 @@
       "Screen sharing and collaboration tools",
       "Meeting recording"
     ],
-    "reviews": [
+    "reviews": 
       {
         "user": "business_pro",
         "rating": 5,
         "comment": "Perfect for remote work and virtual meetings!"
       }
-    ]
+    
   },
   {
     "id": "app010",
@@ -231,13 +230,13 @@
       "Turn-by-turn navigation",
       "Offline maps"
     ],
-    "reviews": [
+    "reviews": 
       {
         "user": "traveler_jane",
         "rating": 5,
         "comment": "Essential for getting around and finding new places!"
       }
-    ]
+    
   },
   {
     "id": "app011",
@@ -255,13 +254,13 @@
       "Filters and lenses",
       "Stories and group chats"
     ],
-    "reviews": [
+    "reviews": 
       {
         "user": "selfie_queen",
         "rating": 4,
         "comment": "Great for fun photos and keeping up with friends!"
       }
-    ]
+    
   },
   {
     "id": "app012",
@@ -279,13 +278,13 @@
       "Filters and effects",
       "Collage maker"
     ],
-    "reviews": [
+    "reviews": 
       {
         "user": "photo_enthusiast",
         "rating": 5,
         "comment": "Amazing app for quick photo editing on the go!"
       }
-    ]
+    
   },
   {
     "id": "app013",
@@ -303,13 +302,13 @@
       "Sleep stories and music",
       "Breathing exercises"
     ],
-    "reviews": [
+    "reviews": 
       {
         "user": "relaxed_mike",
         "rating": 5,
         "comment": "Helps me sleep better and feel more relaxed. Highly recommend!"
       }
-    ]
+    
   },
   {
     "id": "app014",
@@ -327,13 +326,13 @@
       "Download content for offline viewing",
       "Personalized recommendations"
     ],
-    "reviews": [
+    "reviews": 
       {
         "user": "movie_buff",
         "rating": 5,
         "comment": "Great selection of movies and TV shows. Always something new to watch."
       }
-    ]
+    
   },
   {
     "id": "app015",
@@ -351,13 +350,13 @@
       "Personalized learning dashboard",
       "Offline access to content"
     ],
-    "reviews": [
+    "reviews": 
       {
         "user": "learner_rahim",
         "rating": 5,
         "comment": "An excellent platform for self-paced learning. Completely free and very high quality!"
       }
-    ]
+    
   },
   {
     "id": "app016",
@@ -375,13 +374,13 @@
       "Collaborative editing",
       "Works on multiple devices"
     ],
-    "reviews": [
+    "reviews": 
       {
         "user": "cloud_saver",
         "rating": 5,
         "comment": "Perfect for accessing files anywhere and collaborating on documents."
       }
-    ]
+    
   },
   {
     "id": "app017",
@@ -399,13 +398,13 @@
       "Post and comment features",
       "Vote and upvote content"
     ],
-    "reviews": [
+    "reviews": 
       {
         "user": "news_enthusiast",
         "rating": 5,
         "comment": "Love the variety of topics. Great community and discussions."
       }
-    ]
+    
   },
   {
     "id": "app018",
@@ -423,13 +422,13 @@
       "Private and public servers",
       "Screen sharing"
     ],
-    "reviews": [
+    "reviews": 
       {
         "user": "gamer_johnny",
         "rating": 5,
         "comment": "Perfect for gaming chats. I use it every day to communicate with friends."
       }
-    ]
+    
   },
   {
     "id": "app019",
@@ -447,13 +446,13 @@
       "Sign PDFs digitally",
       "Cloud storage integration"
     ],
-    "reviews": [
+    "reviews": 
       {
         "user": "pdf_expert",
         "rating": 5,
         "comment": "Great for managing and editing PDFs. Essential for work and personal use."
       }
-    ]
+    
   },
   {
     "id": "app020",
@@ -471,13 +470,13 @@
       "Route planning and navigation",
       "Community-sourced reports"
     ],
-    "reviews": [
+    "reviews": 
       {
         "user": "driver_mike",
         "rating": 5,
         "comment": "Helps me avoid traffic and find the fastest route."
       }
-    ]
+    
   },
   {
     "id": "app021",
@@ -495,13 +494,13 @@
       "Healthy recipes and meal suggestions",
       "Nutrition tips and insights"
     ],
-    "reviews": [
+    "reviews": 
       {
         "user": "fitgoals_mira",
         "rating": 5,
         "comment": "Super helpful for meal planning and sticking to my diet goals!"
       }
-    ]
+    
   },
   {
     "id": "app022",
@@ -519,13 +518,13 @@
       "Mindfulness workouts",
       "Daily reminders and progress tracking"
     ],
-    "reviews": [
+    "reviews": 
       {
         "user": "calmmind_jane",
         "rating": 5,
         "comment": "A lifesaver for anxiety and sleep! The sleepcasts are amazing."
       }
-    ]
+    
   }
   
 ]
