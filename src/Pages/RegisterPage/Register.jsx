@@ -1,12 +1,14 @@
-import React, { useState } from 'react';
+import React, { use, useState } from 'react';
 import { Link } from 'react-router';
+import { AuthContext } from '../../Context/AuthContext';
+import toast from 'react-hot-toast';
 
 const Register = () => {
     const [ errorMessage, setErrorMessage ] = useState('');
+    const {handleCreateUser, setUser} = use(AuthContext);
 
     const handleRegister = (e) =>{
         e.preventDefault();
-
         const form = e.target;
         const name = form.name.value;
         const photo = form.photoUrl.value;
@@ -19,7 +21,6 @@ const Register = () => {
         const uppercase = /(?=.*[A-Z])/;
         const digit = /(?=.*\d)/;
         const length = /.{8,}/;
-
         if (!lowercase.test(password)) {
             setErrorMessage("Must have a Lowercase letter in the password ");
             return
@@ -37,6 +38,15 @@ const Register = () => {
         else{
             setErrorMessage('')
         }
+
+        // Handle Register
+        handleCreateUser(email, password)
+        .then( (result) => {
+            setUser(result.user);
+            toast.success('Register Successfully!')
+        } ).catch( (error) => {
+            toast.error(error.message);
+        } )
         
     }
 
