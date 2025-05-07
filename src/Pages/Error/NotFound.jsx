@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router';
 import errorImg from '../../assets/error404.jpg'
-import { Helmet } from 'react-helmet';
 
 const NotFound = () => {
     const location = useLocation();
