@@ -57,7 +57,7 @@ const Navbar = () => {
       <div className="navbar-center hidden lg:flex">
         <ul className="menu space-x-6 text-lg font-bold menu-horizontal px-1">
             {
-                menuLinks
+                menuLinks 
             }
         </ul>
       </div>
