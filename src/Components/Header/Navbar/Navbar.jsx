@@ -68,9 +68,13 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end gap-5 items-center">
-            <p>{user && user.email}</p>
+            <p className="hidden md:block">{user && user.email}</p>
             <div className="tooltip tooltip-left" data-tip ={`${user ? user.displayName : '' }`}>
-            <img className="w-12 rounded-full" src={`${user ? user.photoURL || userIcon : userIcon }`} />
+            <div className="avatar">
+            <div className="ring-primary ring-offset-base-100 w-12 rounded-full ring-2 ring-offset-2">
+                <img src={`${user ? user.photoURL || userIcon : userIcon }`} />
+              </div>
+            </div>
             </div>
         <div>
 

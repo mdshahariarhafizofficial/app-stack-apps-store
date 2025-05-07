@@ -49,9 +49,9 @@ const Register = () => {
             navigate('/')
             handleUpdatedUserProfile({
                 displayName: name,
-                photoUrl: photo,
+                photoURL: photo,
             }).then(()=>{
-               setUser({...user, displayName: name, photoUrl: photo});
+               setUser({...user, displayName: name, photoURL: photo});
             })
             .catch(()=>{
                 setUser(user)

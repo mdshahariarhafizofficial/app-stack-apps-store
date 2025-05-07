@@ -40,13 +40,18 @@ const MyProfile = () => {
 
                 {/* Profile Info */}
                 <div className='relative card bg-base-100 shadow-lg shadow-primary col-span-12 lg:col-span-8 md:col-span-6 items-center border-10 border-primary p-8 space-y-5'>
-                    <img 
-                    className='w-[150px] object-cover' 
-                    src={`${user ? user.photoURL || userIcon : userIcon }`} 
-                    alt="" />
+
+                    <div className="avatar">
+                    <div className="object-contain ring-primary ring-offset-base-100 w-30 rounded-full ring-4 ring-offset-2">
+                        <img src={`${user ? user.photoURL || userIcon : userIcon }`} />
+                    </div>
+                    </div>
                     <h2 className='text-xl lg:text-4xl md:text-3xl font-extrabold text-primary'>{user ? user.displayName : 'User Name'}</h2>
                     <p> <span className='text-xl font-bold'>Email:</span> <span className='font-semibold text-accent'>{user ? user.email : ''}</span> </p>
-                    <p className='max-w-full text-center'> <span className='text-xl font-bold'>Photo Url:</span> <span className='font-semibold text-base text-accent'>{user && user.photoURL ? user.photoURL : 'Not Found'}</span> </p>
+
+                    <div className='wrap-anywhere overflow-hidden text-ellipsis'>
+                        <p className='max-w-full text-center'> <span className='text-xl font-bold'>Photo Url:</span> <span className='font-semibold text-base text-accent'>{user && user.photoURL ? user.photoURL : 'Not Found'}</span> </p>
+                    </div>
 
                     <div className={`absolute top-2 right-3 ${ user && user.emailVerified ?  'bg-green-500' : 'bg-red-500' } px-3 py-1 rounded-sm text-white font-bold`}>
                         {
