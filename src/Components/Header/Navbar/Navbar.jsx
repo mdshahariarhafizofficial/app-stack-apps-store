@@ -2,6 +2,7 @@ import React, { use } from "react";
 import { Link, NavLink } from "react-router";
 import AppStoreLogo from "../../../assets/Logo.png";
 import { AuthContext } from "../../../Context/AuthContext";
+import userIcon from '../../../assets/userIcon.png'
 
 const Navbar = () => {
     const {user, handleSingOut} = use(AuthContext)
@@ -61,8 +62,8 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end gap-5 items-center">
-            <p>{user && user.displayName}</p>
-            <img className="w-12" src={`${user? user.photoUrl : 'https://img.icons8.com/?size=50&id=7819&format=png' }`} />
+            <p>{user && user.email}</p>
+            <img className="w-12" src={`${user ? user.photoUrl || userIcon : userIcon }`} />
         <div>
 
           {
