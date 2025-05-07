@@ -35,7 +35,7 @@ const MyProfile = () => {
 
                 {/* Profile Info */}
                 <div className='relative card bg-base-100 shadow-lg shadow-primary col-span-12 lg:col-span-8 md:col-span-6 items-center border-10 border-primary p-8 space-y-5'>
-                    <img className='w-[150px]' src={user && user.imageUrl ? user.imageUrl : "https://www.pngkey.com/png/detail/202-2024792_user-profile-icon-png-download-fa-user-circle.png"} alt="" />
+                    <img className='w-[150px]' src={`${user? user.photoUrl : 'https://img.icons8.com/?size=50&id=7819&format=png' }`} alt="" />
                     <h2 className='text-xl lg:text-4xl md:text-3xl font-extrabold text-primary'>{user ? user.displayName : 'User Name'}</h2>
                     <p> <span className='text-xl font-bold'>Email:</span> <span className='font-semibold text-accent'>{user ? user.email : ''}</span> </p>
                     <p className='text-center'> <span className='text-xl font-bold'>Photo Url:</span> <span className='font-semibold text-base text-accent'>{user && user.photoUrl ? user.photoUrl : 'Not Found'}</span> </p>
@@ -55,11 +55,11 @@ const MyProfile = () => {
                             <fieldset className="fieldset">
                             {/* Name */}
                             <label className="label">Name</label>
-                            <input type="text" name='name' className="input w-full" placeholder="Name" />
+                            <input type="text" name='name' className="input w-full" placeholder="Name" required />
 
                             {/* Photo Url */}
                             <label className="label">Photo URL</label>
-                            <input type="url" name='photoUrl' className="input w-full" placeholder="Photo URL" />
+                            <input type="url" name='photoUrl' className="input w-full" placeholder="Photo URL" required />
                             {/* Submit button */}
                             <button className="btn btn-primary mt-4">Update Profile</button>
                             </fieldset>
