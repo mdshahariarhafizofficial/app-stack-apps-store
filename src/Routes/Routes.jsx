@@ -10,6 +10,7 @@ import Login from '../Pages/LoginPage/Login';
 import MyProfile from '../Pages/My Profile page/MyProfile';
 import PrivateRoute from '../Components/Private/PrivateRoute';
 import Loading from '../Pages/Loader/Loading';
+import ContactUs from '../Pages/Contact/ContactUs';
 
 const router = createBrowserRouter([
     {
@@ -46,6 +47,10 @@ const router = createBrowserRouter([
                 path: 'login',
                 Component: Login
             },
+            {
+                path: 'contact-us',
+                Component: ContactUs,
+            }
         ]
     },
     {

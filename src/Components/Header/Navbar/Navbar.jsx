@@ -19,6 +19,12 @@ const Navbar = () => {
                     isActive? "border-b-2 border-primary rounded-none text-primary" : ""
                 }>My Profile</NavLink>
             </li>
+            <li>
+              <NavLink to="/contact-us" className={
+                ({isActive}) => 
+                    isActive? "border-b-2 border-primary rounded-none text-primary" : ""
+                }>Contact Us</NavLink>
+            </li>
     </>
   return (
     <div className="navbar py-5 lg:px-0 px-2">
