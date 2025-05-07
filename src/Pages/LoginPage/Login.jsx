@@ -2,6 +2,7 @@ import React, { use, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router';
 import { AuthContext } from '../../Context/AuthContext';
 import toast from 'react-hot-toast';
+import { HelmetProvider } from 'react-helmet-async';
 
 
 const Login = () => {
@@ -67,6 +68,11 @@ const Login = () => {
 
     return (
         <div className='min-h-[calc(100vh-412px)] px-5 md:px-0 py-16 flex items-center justify-center'>
+            
+            <HelmetProvider>
+                <title>App Store - Login</title>
+            </HelmetProvider>   
+
             <div className="card bg-base-100 w-full max-w-lg shrink-0 shadow-2xl">
             <form onSubmit={handleLogin} className="card-body">
                 <h2 className='text-4xl font-bold text-center'>Login</h2>

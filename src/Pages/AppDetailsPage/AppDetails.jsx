@@ -1,4 +1,5 @@
 import React from "react";
+import { HelmetProvider } from "react-helmet-async";
 import { FaDownload, FaStar } from "react-icons/fa";
 import { TbMessageChatbotFilled } from "react-icons/tb";
 import { useLoaderData, useParams } from "react-router";
@@ -23,6 +24,10 @@ const AppDetails = () => {
 
   return (
     <div>
+
+      <HelmetProvider>
+        <title>App Store - App Details</title>
+      </HelmetProvider>
 
       {/* Title */}
       <div className="card mt-5 mx-5 lg:mx-0 p-5 bg-base-100 shadow-sm border-1 border-gray-200">

@@ -2,6 +2,7 @@ import React, { use, useState } from 'react';
 import { Link, useNavigate } from 'react-router';
 import { AuthContext } from '../../Context/AuthContext';
 import toast from 'react-hot-toast';
+import { HelmetProvider } from 'react-helmet-async';
 
 const Register = () => {
     const navigate = useNavigate();
@@ -76,6 +77,10 @@ const Register = () => {
 
     return (
         <div className='min-h-[calc(100vh-412px)] px-5 md:px-0 py-16 flex items-center justify-center'> 
+
+        <HelmetProvider>
+            <title>App Store - Register</title>
+        </HelmetProvider>
 
             <div className="card bg-base-100 w-full max-w-lg shrink-0 shadow-2xl">
             <form onSubmit={handleRegister} className="card-body">

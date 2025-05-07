@@ -3,6 +3,7 @@ import { Link } from 'react-router';
 import { AuthContext } from '../../Context/AuthContext';
 import toast from 'react-hot-toast';
 import userIcon from '../../assets/userIcon.png'
+import { HelmetProvider } from 'react-helmet-async';
 
 const MyProfile = () => {
     const {user, handleUpdatedUserProfile, setUser} = use(AuthContext);
@@ -32,6 +33,9 @@ const MyProfile = () => {
 
     return (
         <div className='py-20'>
+        <HelmetProvider>
+            <title>App Store - My Profile</title>
+        </HelmetProvider>
             <div className='grid grid-cols-12 gap-6 px-5 lg:px-0'>
 
                 {/* Profile Info */}

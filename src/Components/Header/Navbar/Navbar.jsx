@@ -63,7 +63,9 @@ const Navbar = () => {
       </div>
       <div className="navbar-end gap-5 items-center">
             <p>{user && user.email}</p>
+            <div className="tooltip tooltip-left" data-tip ={`${user ? user.displayName : '' }`}>
             <img className="w-12" src={`${user ? user.photoUrl || userIcon : userIcon }`} />
+            </div>
         <div>
 
           {
