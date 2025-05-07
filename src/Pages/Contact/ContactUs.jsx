@@ -1,17 +1,19 @@
 import React from 'react';
 import { HelmetProvider } from 'react-helmet-async';
-import { FaPhoneVolume } from 'react-icons/fa';
+import { BsClockFill } from 'react-icons/bs';
+import { FaClock } from 'react-icons/fa';
 import { FaSquarePhone } from 'react-icons/fa6';
+import { IoIosMailOpen } from 'react-icons/io';
 
 const ContactUs = () => {
     return (
-        <div className='min-h-[calc(100vh-402px)]'>
+        <div className='min-h-[70vh]'>
         <HelmetProvider>
             <title>App Store - Contact Us</title>
         </HelmetProvider>
 
 
-            <div className='card shadow-sm p-6 mx-5 lg:mx-0 my-10 border-2 border-gray-200'>
+            <div className='card shadow-sm p-6 mx-5 lg:mx-0 mb-20 mt-20 border-2 border-gray-200'>
                 <h2 className='text-5xl font-bold text-center'>Looking for something?</h2>
             </div>
 
@@ -30,7 +32,7 @@ const ContactUs = () => {
                     </div>
                     <div className="card shadow-sm p-6 bg-primary flex-row gap-6">
                         <div>
-                            <FaSquarePhone size={50} color='white' />
+                            <BsClockFill size={50} color='white' />
                         </div>
                         <div>
                             <h2 className='text-3xl font-bold text-white'>Mon-Sat(10:00-19:00)</h2>
@@ -39,7 +41,7 @@ const ContactUs = () => {
                     </div>
                     <div className="card shadow-sm p-6 bg-amber-600 flex-row gap-6">
                         <div>
-                            <FaSquarePhone size={50} color='white' />
+                            <IoIosMailOpen size={50} color='white' />
                         </div>
                         <div>
                             <h2 className='text-3xl font-bold text-white'>appstore@gmail.com</h2>
@@ -57,7 +59,7 @@ const ContactUs = () => {
                         <input type="text" className="input w-full" placeholder="Name" />
                         <input type="email" className="input w-full" placeholder="Email" />
                         <textarea placeholder="Message" className="textarea textarea-2xl w-full"></textarea>
-                        <button className="btn btn-neutral mt-4">Login</button>
+                        <button className="btn btn-neutral mt-4">Send Message</button>
                         </fieldset>
                     </div>
                     </div>
