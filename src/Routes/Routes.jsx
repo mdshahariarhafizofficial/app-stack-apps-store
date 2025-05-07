@@ -34,7 +34,7 @@ const router = createBrowserRouter([
                     <AppDetails></AppDetails>
                 </PrivateRoute>,
                 loader: () => fetch("../apps.json"),
-                hydrateFallbackElement: <p>Loading........</p>,
+                hydrateFallbackElement: <Loading></Loading>,
                 errorElement: <NotFound></NotFound>
                 
             },
