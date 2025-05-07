@@ -30,6 +30,8 @@ const AuthProvider = ({children}) => {
 
     // Update user profile
     const handleUpdatedUserProfile = (updatedData) => {
+        console.log(updatedData);
+        
         return updateProfile(auth.currentUser, updatedData)
     }
 
