@@ -1,4 +1,4 @@
-import React, { use, useState } from 'react';
+import React, { use, useRef, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router';
 import { AuthContext } from '../../Context/AuthContext';
 import toast from 'react-hot-toast';
@@ -7,7 +7,7 @@ import { HelmetProvider } from 'react-helmet-async';
 
 const Login = () => {
         const [ errorMessage, setErrorMessage ] = useState('');
-        const {handleLoginUser, setUser, handleGoogleSingIn} = use(AuthContext);
+        const {handleLoginUser, setUser, handleGoogleSingIn, passwordReset} = use(AuthContext);
         const navigate = useNavigate();
         const location = useLocation();
         
@@ -66,6 +66,21 @@ const Login = () => {
             })
         }
 
+    // Handle Password Reset
+    const emailRef = useRef();
+
+    const forgotPassword = ()=>{
+        const email = emailRef.current.value;
+        passwordReset(email)
+        .then(()=>{
+            toast.success("Password reset email sent!")
+        })
+        .catch((error)=>{
+            toast.error(error.message)
+        })
+    }
+    
+
     return (
         <div className='min-h-[calc(100vh-412px)] px-5 md:px-0 py-16 flex items-center justify-center'>
             
@@ -79,14 +94,14 @@ const Login = () => {
                 <fieldset className="fieldset">
                 {/* Email */}
                 <label className="label">Email</label>
-                <input type="email" name='email' className="input w-full" placeholder="Email" required />
+                <input type="email" ref={emailRef} name='email' className="input w-full" placeholder="Email" required />
 
                 {/* Password */}
                 <label className="label">Password</label>
                 <input type="password" name='password' className="input w-full" placeholder="Password" required />
                 <p className='text-red-600 font-semibold'>{errorMessage}</p>
 
-                <div><a className="link link-hover">Forgot password?</a></div>
+                <div><a onClick={forgotPassword} className="link link-hover">Forgot password?</a></div>
                 {/* Submit button */}
                 <button type='submit' className="btn btn-primary mt-4">Login</button>
                 <p className='font-medium text-sm mt-5 text-center'>Don't have any account? <Link className='text-primary font-bold' to="/register">Register</Link></p>

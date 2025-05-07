@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { AuthContext } from './AuthContext';
-import { createUserWithEmailAndPassword, onAuthStateChanged, signOut, signInWithEmailAndPassword, updateProfile, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+import { createUserWithEmailAndPassword, onAuthStateChanged, signOut, signInWithEmailAndPassword, updateProfile, GoogleAuthProvider, signInWithPopup, sendPasswordResetEmail } from "firebase/auth";
 import { auth } from '../Firebase/firebase.config';
 import toast from 'react-hot-toast';
 
@@ -57,6 +57,11 @@ const AuthProvider = ({children}) => {
         })
     } 
 
+    // password reset email
+    const passwordReset = (email) => {
+        return sendPasswordResetEmail(auth, email)
+    }
+
     console.log(user);
     
     // Context Data
@@ -69,7 +74,8 @@ const AuthProvider = ({children}) => {
         user,
         setUser,
         setLoading,
-        loading
+        loading,
+        passwordReset,
     }
 
     return (

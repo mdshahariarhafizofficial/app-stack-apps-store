@@ -70,11 +70,13 @@ const Navbar = () => {
       <div className="navbar-end gap-5 items-center">
             <p className="hidden md:block">{user && user.email}</p>
             <div className="tooltip tooltip-left" data-tip ={`${user ? user.displayName : '' }`}>
-            <div className="avatar">
-            <div className="ring-primary ring-offset-base-100 w-12 rounded-full ring-2 ring-offset-2">
-                <img src={`${user ? user.photoURL || userIcon : userIcon }`} />
-              </div>
-            </div>
+              <Link to="/my-profile">    
+                <div className="avatar">
+                <div className="ring-primary ring-offset-base-100 w-12 rounded-full ring-2 ring-offset-2">
+                    <img src={`${user ? user.photoURL || userIcon : userIcon }`} />
+                  </div>
+                </div>
+              </Link>
             </div>
         <div>
 
