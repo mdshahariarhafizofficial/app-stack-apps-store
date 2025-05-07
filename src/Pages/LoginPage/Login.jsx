@@ -1,24 +1,72 @@
-import React from 'react';
+import React, { use, useState } from 'react';
 import { Link } from 'react-router';
+import { AuthContext } from '../../Context/AuthContext';
+import toast from 'react-hot-toast';
+
 
 const Login = () => {
+        const [ errorMessage, setErrorMessage ] = useState('');
+        const {handleLoginUser, setUser} = use(AuthContext);
+
+        const handleLogin = (e) =>{
+            e.preventDefault();
+            const form = e.target;
+            const email = form.email.value;
+            const password = form.password.value;
+            console.log( email, password);
+            
+            // Password Validation
+            const lowercase = /(?=.*[a-z])/;
+            const uppercase = /(?=.*[A-Z])/;
+            const digit = /(?=.*\d)/;
+            const length = /.{8,}/;
+            if (!lowercase.test(password)) {
+                setErrorMessage("Must have a Lowercase letter in the password ");
+                return
+            }else if(!uppercase.test(password)){
+                setErrorMessage('Must have a Uppercase letter in the password ');
+                return
+            }else if(!digit.test(password)){
+                setErrorMessage("Must have a Digit in the password ");
+                return
+            }
+            else if(!length.test(password)){
+                setErrorMessage("Length must be at least 6 character");
+                return
+            }
+            else{
+                setErrorMessage('')
+            }
+
+            // Handle Login User
+            handleLoginUser(email, password)
+            .then( (result) => {
+                setUser(result.user);
+                toast.success('Login Successfully!')
+            } ).catch( (error) => {
+                toast.error(error.message);
+            } )
+
+        }
+
     return (
         <div className='min-h-[calc(100vh-412px)] px-5 md:px-0 py-16 flex items-center justify-center'>
             <div className="card bg-base-100 w-full max-w-lg shrink-0 shadow-2xl">
-            <form className="card-body">
+            <form onSubmit={handleLogin} className="card-body">
                 <h2 className='text-4xl font-bold text-center'>Login</h2>
                 <fieldset className="fieldset">
                 {/* Email */}
                 <label className="label">Email</label>
-                <input type="email" className="input w-full" placeholder="Email" />
+                <input type="email" name='email' className="input w-full" placeholder="Email" required />
 
                 {/* Password */}
                 <label className="label">Password</label>
-                <input type="password" className="input w-full" placeholder="Password" />
+                <input type="password" name='password' className="input w-full" placeholder="Password" required />
+                <p className='text-red-600 font-semibold'>{errorMessage}</p>
 
                 <div><a className="link link-hover">Forgot password?</a></div>
                 {/* Submit button */}
-                <button className="btn btn-primary mt-4">Login</button>
+                <button type='submit' className="btn btn-primary mt-4">Login</button>
                 <p className='font-medium text-sm mt-5 text-center'>Don't have any account? <Link className='text-primary font-bold' to="/register">Register</Link></p>
                 <div className="divider">OR</div>
                 {/* Google */}

@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { AuthContext } from './AuthContext';
-import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
+import { createUserWithEmailAndPassword, onAuthStateChanged, signOut, signInWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { auth } from '../Firebase/firebase.config';
+import toast from 'react-hot-toast';
 
 
 const AuthProvider = ({children}) => {
@@ -16,12 +17,40 @@ const AuthProvider = ({children}) => {
         return signInWithEmailAndPassword(auth, email, password)
     }
 
+    // Update user profile
+    const handleUpdatedUserProfile = (updatedData) => {
+        return updateProfile(auth.currentUser, updatedData)
+    }
+
+
+    // Current User
+    useEffect( () => {
+        const unsubscribe = onAuthStateChanged(auth, (currentUser)=>{
+            setUser(currentUser)
+        })
+        return ()=>{
+            unsubscribe()
+        }
+    }, [] )
+
+    // Handle Sing out
+    const handleSingOut = () => {
+        signOut(auth)
+        .then(()=>{
+            toast.success('Logout Out Successful!')
+        }).catch((error)=>{
+            toast.error(error.message)
+        })
+    } 
+
     console.log(user);
     
     // Context Data
     const userInfo = {
         handleCreateUser,
         handleLoginUser,
+        handleUpdatedUserProfile,
+        handleSingOut,
         user,
         setUser,
     }
