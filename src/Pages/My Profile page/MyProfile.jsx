@@ -1,13 +1,9 @@
 import React from 'react';
-import { Helmet } from 'react-helmet';
 import { Link } from 'react-router';
 
 const MyProfile = () => {
     return (
         <div className='py-20'>
-            <Helmet>
-                <title>App Store - My Profile</title>
-            </Helmet>
             <div className='grid grid-cols-12 gap-6 px-5 lg:px-0'>
 
                 {/* Profile Info */}
