@@ -1,11 +1,12 @@
 import React, { use, useState } from 'react';
-import { Link } from 'react-router';
+import { Link, useNavigate } from 'react-router';
 import { AuthContext } from '../../Context/AuthContext';
 import toast from 'react-hot-toast';
 
 const Register = () => {
+    const navigate = useNavigate();
     const [ errorMessage, setErrorMessage ] = useState('');
-    const {handleCreateUser, setUser} = use(AuthContext);
+    const {handleCreateUser, setUser, handleUpdatedUserProfile} = use(AuthContext);
 
     const handleRegister = (e) =>{
         e.preventDefault();
@@ -42,8 +43,18 @@ const Register = () => {
         // Handle Register
         handleCreateUser(email, password)
         .then( (result) => {
-            setUser(result.user);
+            const user = result.user;
             toast.success('Register Successfully!')
+            navigate('/')
+            handleUpdatedUserProfile({
+                displayName: name,
+                photoUrl: photo,
+            }).then(()=>{
+               setUser({...user, displayName: name, photoUrl: photo});
+            })
+            .catch(()=>{
+                setUser(user)
+            })
         } ).catch( (error) => {
             toast.error(error.message);
         } )

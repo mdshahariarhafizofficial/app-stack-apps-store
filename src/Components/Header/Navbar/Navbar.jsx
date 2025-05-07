@@ -61,8 +61,8 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end gap-5 items-center">
-            <p>{user && user.email}</p>
-            <img className="w-12" src="https://www.pngkey.com/png/detail/202-2024792_user-profile-icon-png-download-fa-user-circle.png" alt="" />
+            <p>{user && user.displayName}</p>
+            <img className="w-12" src={`${user? user.photoUrl : 'https://img.icons8.com/?size=50&id=7819&format=png' }`} />
         <div>
 
           {
