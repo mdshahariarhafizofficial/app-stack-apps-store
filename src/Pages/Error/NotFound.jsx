@@ -5,7 +5,6 @@ import { HelmetProvider } from 'react-helmet-async';
 
 const NotFound = () => {
     const location = useLocation();
-	console.log(location);
 	
     return (
 <section className="min-h-[100vh] flex items-center h-full md:p-16 ">

@@ -16,7 +16,6 @@ const Register = () => {
         const photo = form.photoUrl.value;
         const email = form.email.value;
         const password = form.password.value;
-        console.log(name, photo, email, password);
         
         // Password Validation
         const lowercase = /(?=.*[a-z])/;

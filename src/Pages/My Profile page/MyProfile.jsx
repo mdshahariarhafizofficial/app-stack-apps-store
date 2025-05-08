@@ -16,7 +16,6 @@ const MyProfile = () => {
         const form = e.target;
         const name = form.name.value;
         const photo = form.photoUrl.value;
-        console.log(name, photo);
         
         handleUpdatedUserProfile({
             displayName: name,

@@ -30,7 +30,6 @@ const AuthProvider = ({children}) => {
 
     // Update user profile
     const handleUpdatedUserProfile = (updatedData) => {
-        console.log(updatedData);
         
         return updateProfile(auth.currentUser, updatedData)
     }
@@ -62,7 +61,6 @@ const AuthProvider = ({children}) => {
         return sendPasswordResetEmail(auth, email)
     }
 
-    console.log(user);
     
     // Context Data
     const userInfo = {

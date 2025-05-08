@@ -197,10 +197,7 @@ const AppDetails = () => {
           <div className="md:w-[50%]">
             <form 
             onSubmit={btnDisable ? handleErrorMessage : handleReview } className="flex  flex-col bg-base-300 p-10 rounded-xl space-y-5">
-              {
-                console.log(btnDisable)
-                
-              }
+
               <TbMessageChatbotFilled
                 size={60}
                 color="rgb(250, 139, 22)"
