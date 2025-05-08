@@ -4,6 +4,8 @@ import { AuthContext } from '../../Context/AuthContext';
 import toast from 'react-hot-toast';
 import userIcon from '../../assets/userIcon.png'
 import { HelmetProvider } from 'react-helmet-async';
+import { MdVerified } from "react-icons/md";
+import { RxCrossCircled } from "react-icons/rx";
 
 const MyProfile = () => {
     const {user, handleUpdatedUserProfile, setUser} = use(AuthContext);
@@ -50,10 +52,15 @@ const MyProfile = () => {
                     <p> <span className='text-xl font-bold'>Email:</span> <span className='font-semibold text-accent'>{user ? user.email : ''}</span> </p>
 
                     <div className='wrap-anywhere overflow-hidden text-ellipsis'>
-                        <p className='max-w-full text-center'> <span className='text-xl font-bold'>Photo Url:</span> <span className='font-semibold text-base text-accent'>{user && user.photoURL ? user.photoURL : 'Not Found'}</span> </p>
+                        <p className='max-w-full text-center'> <span className='text-xl font-bold'>Photo Url:</span> <br /> <span className='font-semibold text-base text-accent'>{user && user.photoURL ? user.photoURL : 'Not Found'}</span> </p>
                     </div>
 
-                    <div className={`absolute top-2 right-3 ${ user && user.emailVerified ?  'bg-green-500' : 'bg-red-500' } px-3 py-1 rounded-sm text-white font-bold`}>
+                    <div className={`flex gap-2 absolute top-2 right-3 ${ user && user.emailVerified ?  'bg-green-500' : 'bg-red-500' } px-3 py-1 rounded-sm text-white font-bold`}>
+                        {
+                            user && user.emailVerified ?
+                            <MdVerified size={25} />:
+                            <RxCrossCircled size={25} />
+                        }
                         {
                             user && user.emailVerified ?  'Verified' : 'Not Verified'
                         }

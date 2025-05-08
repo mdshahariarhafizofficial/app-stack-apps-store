@@ -1,10 +1,17 @@
-import React from "react";
+import React, { use, useState } from "react";
 import { HelmetProvider } from "react-helmet-async";
 import { FaDownload, FaStar } from "react-icons/fa";
 import { TbMessageChatbotFilled } from "react-icons/tb";
 import { useLoaderData, useParams } from "react-router";
+import { Rating } from '@smastrom/react-rating';
+import '@smastrom/react-rating/style.css';
+import { AuthContext } from "../../Context/AuthContext";
+import userIcon from '../../assets/userIcon.png';
+import { format } from 'date-fns'
+
 
 const AppDetails = () => {
+  const {user} = use(AuthContext);
   const { id } = useParams();
   const data = useLoaderData();
   const findApp = data.find((res) => res.id == id);
@@ -21,6 +28,28 @@ const AppDetails = () => {
     developer,
     thumbnail,
   } = findApp;
+
+  // Handle Review
+  // const [reviewText, setReviewText] = useState('');
+  const [allReview, setAllReview] = useState([]);
+  const [userRating, setUserRating] = useState(0);
+  const today = new Date();
+  const formattedDate = format(today, 'MMMM d, yyyy (EEEE)')
+
+  const handleReview = (e) =>{
+    e.preventDefault();
+    const text = e.target.text.value;
+    const reviewBox = {
+      text: text,
+      ratingValue: userRating,
+      date: formattedDate,
+    }
+    setAllReview([...allReview, reviewBox]);
+    e.target.text.value = '';
+    setUserRating(0)
+  }
+
+  
 
   return (
     <div>
@@ -149,7 +178,7 @@ const AppDetails = () => {
         <div className="flex flex-col md:flex-row gap-6">
           {/* review form */}
           <div className="md:w-[50%]">
-            <form className="flex  flex-col bg-base-300 p-10 rounded-xl space-y-5">
+            <form onSubmit={handleReview} className="flex  flex-col bg-base-300 p-10 rounded-xl space-y-5">
               <TbMessageChatbotFilled
                 size={60}
                 color="rgb(250, 139, 22)"
@@ -159,8 +188,22 @@ const AppDetails = () => {
                 Your opinion matters!
               </h2>
               <p className="text-center text-accent font-semibold">How was your experience?</p>
+
+
+              {/* Rating */}
+              <div className="mx-auto">
+                <Rating
+                style={{maxWidth: '200px'}}
+                  value={userRating}
+                  onChange={setUserRating}
+                ></Rating>
+              </div>
+
+
               <textarea
                 type="text"
+                name="text"
+                required
                 placeholder="Write your opinion here.."
                 className="textarea textarea-lg textarea-primary w-full"
               ></textarea>
@@ -174,9 +217,9 @@ const AppDetails = () => {
                 Rating & Reviews
               </h2>
             <div className="space-y-4">
-                {/* Review -1  */}
+                {/* Default Review  */}
               <div
-                className="container flex flex-col w-full max-w-lg p-6 mx-auto divide-y rounded-md dark:divide-gray-300 dark:bg-gray-50 dark:text-gray-800 border-2 border-gray-200"
+                className="container flex flex-col w-full max-w-lg mx-auto divide-y rounded-md dark:divide-gray-300 dark:bg-gray-50 dark:text-gray-800 border-2 border-gray-200"
                 bis_skin_checked="1"
               >
                 <div className="flex justify-between p-4" bis_skin_checked="1">
@@ -199,7 +242,10 @@ const AppDetails = () => {
                     className="flex items-center space-x-2"
                     bis_skin_checked="1"
                   >
-                    <FaStar size={20} color="rgb(250, 139, 22)"></FaStar>
+                      <Rating
+                          style={{maxWidth: '80px'}}
+                          value={reviews.rating}
+                      ></Rating>
                     <span className="text-xl font-bold">{reviews.rating}</span>
                   </div>
                 </div>
@@ -214,6 +260,58 @@ const AppDetails = () => {
                   </p>
                 </div>
               </div>
+
+                {/* User Review */}
+                {
+                  allReview.map((review, i) => <div
+                    key={i} 
+                    className="container flex flex-col w-full max-w-lg p- mx-auto divide-y rounded-md dark:divide-gray-300 dark:bg-gray-50 dark:text-gray-800 border-2 border-gray-200"
+                    bis_skin_checked="1"
+                  >
+                    <div className="flex justify-between p-4" bis_skin_checked="1">
+                      <div className="flex space-x-4" bis_skin_checked="1">
+                        <div bis_skin_checked="1">
+                          <img
+                            src={`${user ? user.photoURL || userIcon : userIcon }`}
+                            alt=""
+                            className="object-cover w-12 h-12 rounded-full dark:bg-gray-500"
+                          />
+                        </div>
+                        <div bis_skin_checked="1">
+                          <h4 className="font-bold">{
+                              user ? user.displayName : 'user name'
+                            }</h4>
+                          <span className="text-xs dark:text-gray-600">
+                            {
+                              review.date
+                            }
+                          </span>
+                        </div>
+                      </div>
+                      <div
+                        className="flex items-center space-x-2"
+                        bis_skin_checked="1"
+                      >
+                      <Rating
+                          style={{maxWidth: '80px'}}
+                          value={review.ratingValue}
+                      ></Rating>
+                        <span className="text-xl font-bold">{review.ratingValue}</span>
+                      </div>
+                    </div>
+                    <div
+                      className="p-4 space-y-2 text-sm dark:text-gray-600"
+                      bis_skin_checked="1"
+                    >
+                      <p className="font-semibold">
+                        {
+                            review.text
+                        }
+                      </p>
+                    </div>
+                  </div>)
+                }
+
             {/* ------- */}
 
 
