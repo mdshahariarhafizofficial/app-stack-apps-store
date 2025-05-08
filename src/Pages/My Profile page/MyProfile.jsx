@@ -31,6 +31,8 @@ const MyProfile = () => {
             setUser(user)
         })
 
+        form.photoUrl.value = '';
+        form.name.value = ''
     }
 
     return (

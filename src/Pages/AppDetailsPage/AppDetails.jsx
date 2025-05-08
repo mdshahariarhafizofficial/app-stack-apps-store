@@ -12,6 +12,9 @@ import { format } from 'date-fns'
 
 const AppDetails = () => {
   const {user} = use(AuthContext);
+  const [btnDisable, setBtnDisable] = useState(true);
+  const [errorMessage, setErrorMessage] = useState('');
+  const [install, setInstall] = useState(false);
   const { id } = useParams();
   const data = useLoaderData();
   const findApp = data.find((res) => res.id == id);
@@ -47,9 +50,14 @@ const AppDetails = () => {
     setAllReview([...allReview, reviewBox]);
     e.target.text.value = '';
     setUserRating(0)
+    setErrorMessage('')
   }
 
-  
+  const handleErrorMessage = (e) => {
+    e.preventDefault();
+    btnDisable && setErrorMessage('⚠️ First, install the app, and then you can submit a review')
+    return
+  }
 
   return (
     <div>
@@ -90,7 +98,16 @@ const AppDetails = () => {
           </div>
         </div>
         <div>
-          <button className="btn btn-primary px-10 py-5 mr-10">Install</button>
+
+          {
+            install ? <button onClick={()=>setInstall(!install)} className="btn bg-red-500 text-white px-10 py-5 mr-10">Uninstall</button> :           
+            <button onClick={()=> {
+              setInstall(!install)
+              setBtnDisable(false)
+              setErrorMessage('')
+            }} className="btn btn-primary px-10 py-5 mr-10">Install</button>
+          }
+
         </div>
         {isTrending ? (
           <p className="absolute top-6 -right-8 bg-red-600 text-white font-bold w-42 text-sm text-center py-1 rotate-[35deg]">
@@ -99,11 +116,11 @@ const AppDetails = () => {
         ) : (
           ""
         )}
-        {/* {name === "Programming Hero" && (
-          <p className="absolute top-4 -left-10 bg-green-500 text-white font-bold w-40 text-sm text-center py-1 rotate-[-35deg]">
+        {name === "Programming Hero" && (
+          <p className="absolute top-6 -right-8 bg-green-600 text-white font-bold w-42 text-sm text-center py-1 rotate-[35deg]">
             Popular
           </p>
-        )} */}
+        )}
       </div>
 
       {/* Banner */}
@@ -178,7 +195,12 @@ const AppDetails = () => {
         <div className="flex flex-col md:flex-row gap-6">
           {/* review form */}
           <div className="md:w-[50%]">
-            <form onSubmit={handleReview} className="flex  flex-col bg-base-300 p-10 rounded-xl space-y-5">
+            <form 
+            onSubmit={btnDisable ? handleErrorMessage : handleReview } className="flex  flex-col bg-base-300 p-10 rounded-xl space-y-5">
+              {
+                console.log(btnDisable)
+                
+              }
               <TbMessageChatbotFilled
                 size={60}
                 color="rgb(250, 139, 22)"
@@ -207,6 +229,8 @@ const AppDetails = () => {
                 placeholder="Write your opinion here.."
                 className="textarea textarea-lg textarea-primary w-full"
               ></textarea>
+              <p className="text-red-500 ">
+                {errorMessage}</p>
               <button className="btn btn-primary">Submit</button>
             </form>
           </div>
