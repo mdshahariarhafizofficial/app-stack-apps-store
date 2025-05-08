@@ -74,6 +74,7 @@ const Login = () => {
         passwordReset(email)
         .then(()=>{
             toast.success("Password reset email sent!")
+            window.location.href = "https://mail.google.com/";
         })
         .catch((error)=>{
             toast.error(error.message)

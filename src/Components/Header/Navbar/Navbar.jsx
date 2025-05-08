@@ -75,7 +75,7 @@ const Navbar = () => {
                   <Link to="/my-profile">    
                   <div className="avatar">
                   <div className="ring-primary ring-offset-base-100 w-12 rounded-full ring-2 ring-offset-2">
-                      <img src={`${user ? user.photoURL || userIcon : userIcon }`} />
+                      <img src={`${user ? user.photoURL || userIcon : userIcon }`} referrerPolicy="no-referrer" />
                     </div>
                   </div>
                 </Link>
