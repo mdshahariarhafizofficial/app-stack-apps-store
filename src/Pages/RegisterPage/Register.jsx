@@ -21,7 +21,7 @@ const Register = () => {
         const lowercase = /(?=.*[a-z])/;
         const uppercase = /(?=.*[A-Z])/;
         const digit = /(?=.*\d)/;
-        const length = /.{8,}/;
+        const length = /.{6,}/;
         if (!lowercase.test(password)) {
             setErrorMessage("Must have a Lowercase letter in the password ");
             return
