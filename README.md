@@ -1,6 +1,8 @@
 
 # 📱 AppStack – React App Store
 
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+
 **AppStack** is a responsive, user-friendly web application built using **React**, **Firebase**, and **Tailwind CSS**. It includes modern UI design, user authentication, profile management, and protected routes — making it a complete app browsing solution.
 
 ---
@@ -80,6 +82,7 @@ npm install
 npm run dev
 ```
 
+> ⚠️ Firebase config must be set in `.env` file before starting the server.
 
 ---
 
@@ -93,4 +96,4 @@ npm run dev
 
 ## 📌 License
 
-This project is for educational and personal portfolio use. Commercial usage is not permitted without permission.
+This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
